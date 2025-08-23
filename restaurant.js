@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz-AtXNDn0Dwk0V90H17hxcAzm-2Et1wb8k61ghPXi3sYf8Hotgf-7GTfNAmKit1Cn2/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx9e7rm8vBJI1p1RgaPr_-9N-7n6R4DOe2AUmUiUPwxdnfNmgyTCg9sP6I78jRODn3s/exec";
 
 const form = document.getElementById("reservationForm");
 const statusEl = document.getElementById("status");
@@ -41,3 +41,4 @@ form.addEventListener("submit", async function(e) {
     statusEl.style.color = "red";
   }
 });
+
