@@ -1,10 +1,11 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw-a1nEW5G19Br43nWwoo8fuApDFjACZLLWglRGM8wo5f6Yt2BZMprgrQbcD6ArHI9H/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz-AtXNDn0Dwk0V90H17hxcAzm-2Et1wb8k61ghPXi3sYf8Hotgf-7GTfNAmKit1Cn2/exec";
 
 const form = document.getElementById("reservationForm");
 const statusEl = document.getElementById("status");
 
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
+
   const data = {
     name: form.name.value.trim(),
     email: form.email.value.trim(),
@@ -15,17 +16,28 @@ form.addEventListener("submit", async function(e) {
   };
 
   statusEl.textContent = "Submitting...";
+
   try {
-    await fetch(WEB_APP_URL, {
+    const response = await fetch(WEB_APP_URL, {
       method: "POST",
-      mode: "no-cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
-    statusEl.textContent = "✅ Reservation submitted! We'll confirm shortly via email.";
-    form.reset();
+
+    const result = await response.json();
+
+    if (result.status === "success") {
+      statusEl.textContent = "✅ Reservation submitted! We'll confirm shortly via email.";
+      statusEl.style.color = "green";
+      form.reset();
+    } else {
+      statusEl.textContent = "❌ Error: " + result.message;
+      statusEl.style.color = "red";
+    }
+
   } catch (err) {
     console.error(err);
-    statusEl.textContent = "❌ Failed to submit. Please try again.";
+    statusEl.textContent = "❌ Failed to connect. Please try again.";
+    statusEl.style.color = "red";
   }
 });
