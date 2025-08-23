@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prixon Restaurant</title>
+  <link rel="stylesheet" href="restaurant.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+   <nav>
+  <h1 class="logo">Prixon</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reservations">Reservations</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Prixon</h2>
+      <p>Where fine dining meets unforgettable experiences.</p>
+      <a href="#reservations" class="btn">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+ <section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-items">
+
+    <!-- Starters -->
+    <div class="card">
+      <img src="tomato-soup-recipe.jpg" alt="Soup">
+      <h3>Tomato Soup</h3>
+      <p>Rich and creamy tomato soup with herbs.</p>
+      <span>₹149</span>
+    </div>
+
+    <div class="card">
+      <img src="220905_DD_Chx-Caesar-Salad_051.jpg" alt="Salad">
+      <h3>Caesar Salad</h3>
+      <p>Crisp lettuce, parmesan, and homemade dressing.</p>
+      <span>₹179</span>
+    </div>
+
+    <!-- Main Course -->
+    <div class="card">
+      <img src="grilledbbqchicken-8b-3-scaled.jpg" alt="Dish 1">
+      <h3>Grilled Chicken</h3>
+      <p>Served with vegetables and garlic sauce.</p>
+      <span>₹299</span>
+    </div>
+
+    <div class="card">
+      <img src="Penne-Alfredo.jpg" alt="Dish 2">
+      <h3>Pasta Alfredo</h3>
+      <p>Creamy pasta topped with parmesan.</p>
+      <span>₹249</span>
+    </div>
+
+    <div class="card">
+      <img src="classic-cheese-pizza-recipe-2-64429a0cb408b.avif" alt="Dish 3">
+      <h3>Cheese Pizza</h3>
+      <p>Freshly baked with extra mozzarella.</p>
+      <span>₹289</span>
+    </div>
+
+    <div class="card">
+      <img src="biryani.jpeg" alt="Biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Fragrant basmati rice cooked with aromatic spices.</p>
+      <span>₹349</span>
+    </div>
+
+    <div class="card">
+      <img src="delicious-spicy-fried-chicken-burger-ads-with-burning-fire-dark-background_226766-29.avif" alt="Burger">
+      <h3>Classic Burger</h3>
+      <p>Juicy Chicken patty with cheese & fries.</p>
+      <span>₹229</span>
+    </div>
+
+    <!-- Desserts -->
+    <div class="card">
+      <img src="Ice-cream-sundae-hero-11.jpg" alt="Ice Cream">
+      <h3>Ice Cream Sundae</h3>
+      <p>Vanilla ice cream with chocolate syrup & nuts.</p>
+      <span>₹129</span>
+    </div>
+
+    <div class="card">
+      <img src="choco lava cake.webp" alt="Cake">
+      <h3>Chocolate Lava Cake</h3>
+      <p>Warm gooey chocolate cake served with ice cream.</p>
+      <span>₹169</span>
+    </div>
+
+  </div>
+ </section>
+
+     <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At <strong>Prixon Restaurant</strong>, we believe dining is more than just eating – 
+      it’s about creating memories. Nestled in the heart of Bhubaneswar, Prixon blends 
+      authentic flavors, cozy ambiance, and warm hospitality. Our chefs prepare every dish 
+      with the freshest ingredients, combining traditional recipes with modern twists.
+    </p>
+    <p>
+      Whether you’re here for a family dinner, a romantic evening, or a celebration with 
+      friends, Prixon promises an unforgettable dining experience. From sizzling starters 
+      and hearty mains to indulgent desserts, we have something to delight every palate. 
+      Come hungry, leave happy! ❤️
+    </p>
+  </section>
+
+
+  <!-- Reservations -->
+  <section id="reservations">
+    <h2>Reservations</h2>
+    <form id="reservationForm" class="reservation-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+      <button type="submit" class="btn">Reserve Now</button>
+      <p id="status" class="status"></p>
+    </form>
+  </section>
+
+  <!-- Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
+      <div class="event-card">
+        <h3>Live Music Night</h3>
+        <p>Join us every Friday for live performances from local artists.</p>
+        <span>Fridays, 7PM onwards</span>
+      </div>
+      <div class="event-card">
+        <h3>Family Brunch</h3>
+        <p>Special brunch menu for families with kids’ discounts.</p>
+        <span>Sundays, 10AM – 2PM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@prixon.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: 123 Food Street, Bhubaneswar, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prixon Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="restaurant.js"></script>
+</body>
+</html>
